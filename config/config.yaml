@@ -1,5 +1,0 @@
-{
-  "cities": ["New York", "London", "Tokyo", "Paris", "Sydney"],
-  "columns_to_ignore": [],
-  "bucket_name": "your-gcs-bucket-name"
-}
