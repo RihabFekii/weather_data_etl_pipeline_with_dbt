@@ -1,3 +1,4 @@
-requests==2.26.0
-google-cloud-storage==1.42.0
-pytest
+requests==2.32.3
+google-cloud-storage==3.0.0
+pytest==8.3.4
+python-dotenv==1.0.1
