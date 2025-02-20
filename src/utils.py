@@ -4,7 +4,6 @@ import pandas as pd
 from google.cloud import storage
 from google.oauth2 import service_account
 from io import StringIO
-import os
 from dotenv import load_dotenv
 
 # Load environment variables
