@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: weather_analysis
+    description: "This model provides daily weather analysis for various cities"
+    columns:
+      - name: city
+        description: "The name of the city"
+        tests:
+          - not_null
+          - unique
+      - name: date
+        description: "The date of the weather measurement"
+        tests:
+          - not_null
+      - name: avg_temp_celsius
+        description: "Average daily temperature in Celsius"
+      - name: avg_temp_fahrenheit
+        description: "Average daily temperature in Fahrenheit"
+      - name: temp_variation
+        description: "Temperature variation (max - min) for the day"
+    tests:
+      - dbt_utils.accepted_range:
+          column_name: avg_temp_celsius
+          min_value: -50
+          max_value: 50
+      - dbt_utils.accepted_range:
+          column_name: avg_temp_fahrenheit
+          min_value: -58
+          max_value: 122

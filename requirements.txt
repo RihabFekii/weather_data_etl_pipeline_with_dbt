@@ -6,3 +6,5 @@ pytest==8.3.4
 python-dotenv==1.0.1
 build==1.2.2.post1 # for building our package
 twine==6.1.0 # for uploading the package to GCP Artifact Registry
+dbt-core==1.9.2
+dbt-bigquery==1.9.1  # dbt BigQuery adapter
