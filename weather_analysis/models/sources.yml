@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: weather_data
+    database: dd-testtask-rf-016d
+    schema: raw_data
+    tables:
+      - name: weather_measurements
+        columns:
+          - name: city
+          - name: date
+          - name: temperature
+          - name: weather_condition

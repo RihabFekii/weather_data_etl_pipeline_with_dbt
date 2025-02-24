@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_weather
+    columns:
+      - name: city
+        tests:
+          - not_null
+      - name: date
+        description: "The date of the weather measurement"
+      - name: temperature_celsius
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: -100
+              max_value: 100
+      - name: humidity
+        description: "Relative humidity in percentage"
+      - name: pressure
+        description: "Atmospheric pressure"
+      - name: wind_speed
+        description: "Wind speed measurement"
+
